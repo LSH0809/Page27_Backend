@@ -246,3 +246,38 @@ page27 클론코딩 프로젝트입니다.
   <img src = "https://user-images.githubusercontent.com/69083280/124271205-2350fa00-db78-11eb-8609-b1a364afa1a3.JPG" height = "400px" width = "90%">
 </p>
 
+------------
+
+
+## ✔️ Backend 세부 기능
+
++ Spring Data JPA / Querydsl
+
+<p align = "center">
+  <img src = "https://user-images.githubusercontent.com/73347933/124285091-906c8b80-db88-11eb-9ef9-fbd97d9f664d.png" height = "250px" width ="40%">
+  <img src = "https://user-images.githubusercontent.com/73347933/124285253-b85bef00-db88-11eb-9190-745374f5feec.png" height = "250px" width ="40%">
+</p>
+
+  ```
+  - 동적 쿼리가 필요한 부분에는 해당하는 Repository의 Custom명칭의 인터페이스, Impl 클래스를 만들어 동적 쿼리가 가능하게 만들었다.
+  - Querydsl을 작성할 때는 @QueryProjection을 이용하는 방식을 이용하였다.
+  - 데이터 조회를 할 때는 Pageable 인터페이스를 활용해서 페이징이 가능하게 구현하였다.
+  ```
+
+<br/>
+
++ Spring Security
+
+```
+- 로그인, 회원가입, 페이지별 권한 설정은 스프링 시큐리티를 이용하여 구현하였다.
+- '인증'과 '인가'에 대한 부분을 Filter의 흐름에 따라 처리하므로 보안 관련 로직을 따로 일일이 작성하지 않아도 되었다.
+- Ajax를 구현할 때 csrf 토큰을 HTTP Header에 담아서 전송하는 식으로 구현하였다.
+```
+
+<br/>
+
+## ✔️ 아쉬운 부분 
+
++ 배포까지 진행을 해보고 싶었으나 여러 제약이 있어 배포까지는 진행하지 못해서 아쉽다. 아쉬운 만큼, 이번기회에 공부해서 다음 프로젝트에는 꼭 적용해보고 싶다.
++ 이번에는 세션을 이용해 구현하였다면 다음에는 jwt 토큰 방식으로 구현을 해보고 싶다.
++ Spring Data JPA와 Querydsl등 공부하면서 진행하다보니 기간도 생각보다 길어지고, 코드 상 아쉬운 부분이 많았다. 다음에는 좀 더 효율적으로 작성하고 싶다.
