@@ -104,13 +104,9 @@ public class AdminController {
         for (int i = 0; i < fileList.size(); i++) {
             String originFileName = fileList.get(i).getOriginalFilename();
             String safeFile = folderPath + originFileName;
-//            System.out.println("check here");
-//            System.out.println(folderPath);
-//            System.out.println(originFileName);
 
             String upperFirstCategory = firstCategory.toUpperCase(Locale.ROOT);
             String newUrl = "/image/Item/" + upperFirstCategory + "/" +  secondCategory  + "/" + itemName + "/" + originFileName;
-//            System.out.println("newUrl : " + newUrl);
 
             Item item = new Item(firstCategory, secondCategory, thirdCategory, itemName, itemPrice, itemInfo, itemColor, itemFabric, itemModel, itemSize, itemQuantity, newUrl, saleStatus, newItemIdx + 1, true);
 
